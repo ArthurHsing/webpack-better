@@ -14,7 +14,13 @@ module.exports = {
         use: [
           'loader1',
           'loader2',
-          'loader3'
+          {
+            loader: 'loader3',
+            options: {
+              name: 'jack',
+              age: 18
+            }
+          }
         ]
       }
     ]

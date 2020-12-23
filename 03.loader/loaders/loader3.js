@@ -1,8 +1,21 @@
-// loader本质上是一个函数
-// content就是源文件的内容
+//getOptions方法可以来获取loader的选项（这个包webpack没有自带）
+const { getOptions } = require('loader-utils');
+// 验证options是不是符合规范（这个包是webpack内部自带的包）
+const { validate } = require('schema-utils');
+
+const schema = require('./schema');
+
 module.exports = function (content, map, meta) {
-  // console.log(content);
-  console.log(333);
+  // 获取options
+  const options = getOptions(this);
+
+  console.log(333, options);
+
+  // 校验options是否合法
+  validate(schema, options, {
+    name: 'loader3'
+  })
+
   return content;
 }
 module.exports.pitch = function () {

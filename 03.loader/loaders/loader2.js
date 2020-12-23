@@ -7,6 +7,7 @@ module.exports = function (content, map, meta) {
   setTimeout(() => {
     callback(null, content)
   }, 1000)
+  console.log('loader2中的异步')
 }
 module.exports.pitch = function () {
   console.log('pitch 222');
