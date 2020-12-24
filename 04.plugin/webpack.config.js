@@ -8,8 +8,8 @@ module.exports = {
     // new Plugin2()
     new CopyWebpackPlugin({
       from: 'public',
-      // to: '.',
-      ignore: ['index.html']
+      to: 'css',
+      ignore: ['**/index.html']
     })
   ]
 }
