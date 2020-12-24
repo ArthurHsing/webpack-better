@@ -1,0 +1,15 @@
+{
+  "name": "05.myWebpack",
+  "version": "1.0.0",
+  "description": "1.初始化 Compiler：new Webpack(config) 得到 Compiler 对象",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "node ./script/build.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
