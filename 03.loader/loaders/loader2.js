@@ -3,6 +3,7 @@
 // 异步loader
 module.exports = function (content, map, meta) {
   console.log(222);
+  // 调用this.async() 告诉webpack这是一个异步loader，需要等待 callback() 回调之后再进行下一个loader处理 
   const callback = this.async();
   setTimeout(() => {
     callback(null, content)

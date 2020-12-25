@@ -11,7 +11,7 @@ module.exports = function (content, map, meta) {
 
   console.log(333, options);
 
-  // 校验options是否合法
+  // 校验options是否合法，如果不合法，会报错
   validate(schema, options, {
     name: 'loader3'
   })
